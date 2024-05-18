@@ -25,33 +25,26 @@ const prepareFile = async (url) => {
 const server = http.createServer(async (req, res) => {
   const file = await prepareFile(req.url)
   const mimeType = MINE_TYPES[file.ext] || MINE_TYPES.default
-  // const filePath = path.resolve(__dirname, "../public/index.html");
-  // const fileContent = fs.readFileSync(filePath);
 
-  // console.log(process.cwd())
-  // console.log(req.url)
-  
-  // console.log(`${process.cwd()}\n${filePath}`)
 
   res.writeHead(200, { "Content-type": mimeType })
   file.stream.pipe(res)
-  // res.end(fileContent);
 });
 
 const io = require('socket.io')(server)
 
 io.on('connection', (socket) => {
   console.log('user connected')
-  // console.log(`${socket.id}`)
+  console.log(`${socket.id}`)
 
   socket.on('disconnect', () => {
     console.log('user disconnected')
   });
 
-  socket.on('message', (message) => {
-    console.log('user says; ', message)
-    io.emit('message', message)
-  });
+  // socket.on('message', (message) => {
+  //   console.log('user says; ', message)
+  //   io.emit('message', message)
+  // });
 });
 
 server.listen(port, () => {

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Boxicons -->
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  <!-- My CSS -->
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>15 Minute Game</title>
+</head>
+
+<body>
+
+
+  <!-- SIDEBAR -->
+  <section id="sidebar">
+    <a href="#" class="brand">
+      <i class='bx bxs-smile'></i>
+      <span class="text">Game of Chances</span>
+    </a>
+    <ul class="side-menu top">
+      <li>
+        <a href="dashboard.html">
+          <i class='bx bxs-dashboard'></i>
+          <span class="text">Dashboard</span>
+        </a>
+      </li>
+      <li class="active">
+        <a href="home.html">
+          <i class='bx bxs-doughnut-chart'></i>
+          <span class="text">Game Modes</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bxs-doughnut-chart'></i>
+          <span class="text">Top-Up Coins</span>
+        </a>
+      </li>
+    </ul>
+    <ul class="side-menu">
+      <li>
+        <a href="#">
+          <i class='bx bxs-cog'></i>
+          <span class="text">Settings</span>
+        </a>
+      </li>
+      <li>
+        <a href="index.html" class="logout">
+          <i class='bx bxs-log-out-circle'></i>
+          <span class="text">Logout</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+  <!-- SIDEBAR -->
+
+
+
+  <!-- CONTENT -->
+  <section id="content">
+    <!-- NAVBAR -->
+    <nav>
+      <i class='bx bx-menu'></i>
+      <form action="#">
+        <div class="form-input">
+            <span></span>
+        </div>
+      </form>
+      <input type="checkbox" id="switch-mode" hidden>
+      <label for="switch-mode" class="switch-mode"></label>
+      <a href="#" class="profile">Login</a>
+      <a href="#" class="profile">Sign Up</a>
+    </nav>
+    <!-- NAVBAR -->
+
+    <!-- MAIN -->
+    <main>
+      <div class="head-title">
+        <div class="left">
+          <h1>Game Modes</h1>
+          <ul class="breadcrumb">
+            <li><a href="home.html">Home</a></li>
+            <li><i class='bx bx-chevron-right'></i></li>
+            <li><a href="five-minutes.html">5 Minute</a></li>
+            <li><i class='bx bx-chevron-right'></i></li>
+            <li><a class="active" href="fifthteen-minutes.html">15 Minute</a></li>
+            <li><i class='bx bx-chevron-right'></i></li>
+            <li><a href="thirty-minutes.html">30 Minute</a></li>
+          </ul>
+        </div>
+      </div>
+        
+      <div class="container">
+            <h2>Enter your lotto numbers (1-45):</h2>
+            <form id="lottoForm">
+                <input type="text" id="num1" name="num1" required>
+                <input type="text" id="num2" name="num2" required>
+                <input type="text" id="num3" name="num3" required>
+                <input type="text" id="num4" name="num4" required>
+                <input type="text" id="num5" name="num5" required>
+                <input type="text" id="num6" name="num6" required>
+                <button type="submit" id="submit">Submit</button>
+            </form>
+        </div>
+
+    </main>
+    <!-- MAIN -->
+  </section>
+  <!-- CONTENT -->
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
