@@ -3,6 +3,8 @@ const path = require("path");
 const fs = require("fs");
 const port = 8000;
 
+const db = require("./db.js")
+
 const MINE_TYPES = {
   default: "application/octet-stream",
   html: "text/html; charset-UTF-8",
@@ -46,6 +48,8 @@ io.on('connection', (socket) => {
   //   io.emit('message', message)
   // });
 });
+
+// db.query()
 
 server.listen(port, () => {
   console.log(`Listening on http://localhost:${port}`);
