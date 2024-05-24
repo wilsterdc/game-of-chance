@@ -49,7 +49,7 @@ io.on('connection', (socket) => {
   // });
 });
 
-// db.query()
+// db.query("CREATE DATABASE game-of-chance;")
 
 server.listen(port, () => {
   console.log(`Listening on http://localhost:${port}`);

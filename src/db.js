@@ -1,13 +1,20 @@
 const mysql = require("mysql")
+const dotenv = require("dotenv")
+// import mysql from "mysql"
+// import dotenv from "dotenv"
 
-const dbConnection = mysql.createConnection({
-    host: "localhost",
-    user: "goc",
-    password: "gocadmin1234",
-    port: 3000
+dotenv.config()
+
+const dbConnection = mysql.createPool({
+    host: process.env.host,
+    user: process.env.user,
+    password: process.env.password,
+    port: process.env.port
 })
 
-dbConnection.connect((error) => {
+dbConnection.getConnection((error) => {
     if (error) throw error;
-    console.log("Connected")
+    console.log("Connected to database")    
 })
+
+// export default dbConnection
