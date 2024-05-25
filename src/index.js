@@ -28,7 +28,7 @@ const server = http.createServer(async (req, res) => {
   const file = await prepareFile(req.url)
   const mimeType = MINE_TYPES[file.ext] || MINE_TYPES.default
 
-
+  console.log(req.url)
   res.writeHead(200, { "Content-type": mimeType })
   file.stream.pipe(res)
 });
